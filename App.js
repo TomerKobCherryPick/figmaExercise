@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import LibraryFlatList from "./js/LibraryFlatList.js";
+import styles from "./js/styles/AppStyles.js"
 
 export default class App extends Component {
   constructor() {
@@ -28,7 +29,6 @@ export default class App extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <View style={styles.container}>
         <LibraryFlatList items={this.state.items} />
@@ -36,13 +36,3 @@ export default class App extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    alignSelf: 'center',
-  //  backgroundColor: "#FFFFFF"
-  }
-});
